@@ -12,6 +12,7 @@
   </body>
   <script>
     function iterateOverImages() {
+      var visited = [];
       var images = [
         "https://preview.redd.it/o9ptmqw8sxk21.gif?format=mp4&s=d173a07e876b542346bfd573c76c01ffa1fcf1bd",
         "https://preview.redd.it/90ekftm1ltgy.gif?format=mp4&s=5565d22b272775d99f678b3d07cc5cc84a116eb7",
@@ -30,9 +31,11 @@
       ];
       // var time = 10 * 60 * 1000;
 
-      var time = 500;
+      var time = 5000;
       setInterval(function () {
-        var curImage = images[Math.floor(Math.random() * images.length)];
+        var newImageKey = Math.floor(Math.random() * images.length);
+        visited.push(newImageKey);
+        var curImage = images[newImageKey];
         console.log(curImage);
         document.getElementById("image").src = curImage;
       }, time);
