@@ -143,6 +143,10 @@
         // "",
       ];
       var time = 5 * 60 * 1000;
+      var newImageKey1 = Math.floor(Math.random() * images.length);
+      visited.push(newImageKey1);
+      var curImage1 = images[newImageKey1];
+      document.getElementById("image").src = curImage1;
       setInterval(function () {
         var newImageKey = Math.floor(Math.random() * images.length);
         visited.push(newImageKey);
