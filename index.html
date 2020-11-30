@@ -1,0 +1,43 @@
+<html>
+  <body style="margin: 0; padding: 0">
+    <video
+      id="image"
+      preload="auto"
+      autoplay="autoplay"
+      muted="muted"
+      loop="loop"
+      style="position: fixed; width: 100%; height: 100%; object-fit: fill"
+      src=""
+    ></video>
+  </body>
+  <script>
+    function iterateOverImages() {
+      var images = [
+        "https://preview.redd.it/o9ptmqw8sxk21.gif?format=mp4&s=d173a07e876b542346bfd573c76c01ffa1fcf1bd",
+        "https://preview.redd.it/90ekftm1ltgy.gif?format=mp4&s=5565d22b272775d99f678b3d07cc5cc84a116eb7",
+        "https://preview.redd.it/hxyi8pp1rfz31.gif?format=mp4&s=ad6d56156418d28a3bf3471732a782399793badc",
+        "https://preview.redd.it/ndyum802eoj41.gif?format=mp4&s=8e39f87f660b1071d31a7818ae87089634c92f8c",
+        "https://i.imgur.com/oy91jyx.mp4",
+        "https://preview.redd.it/8xfjrzvdj9c21.gif?format=mp4&s=98f227ae2989f08b99334faaf34f163cef88d31e",
+        "https://preview.redd.it/rtdgw0jotbp51.gif?format=mp4&s=f3177c8e686ec64d6b7ebd57e690f6bd1dd3d736",
+        "https://v.redd.it/lolch10zrm341/DASH_720",
+        "https://preview.redd.it/q185zgnnqn121.gif?format=mp4&s=d45123a6561862c9814506d49c38ea9672fea20b",
+        "https://preview.redd.it/96hc9ojx0zx41.gif?format=mp4&s=f350e4ffb4feac6f4726c907461f64856a074df7",
+        "https://preview.redd.it/f1a9wuof8sd01.gif?format=mp4&s=3a6dce06639fff8ee900673eff4ae36f769fc914",
+        "https://preview.redd.it/5nkq3pcyxrc21.gif?format=mp4&s=e6c60a139edc15367b393ccae0daf3b2c3d9626b",
+        "https://v.redd.it/xkzr7al49g851/DASH_720",
+        "https://preview.redd.it/810g0l3sgis01.gif?format=mp4&s=46ab251c582b5dac6442e94879885d595af6aa5d",
+      ];
+      // var time = 10 * 60 * 1000;
+
+      var time = 500;
+      setInterval(function () {
+        var curImage = images[Math.floor(Math.random() * images.length)];
+        console.log(curImage);
+        document.getElementById("image").src = curImage;
+      }, time);
+    }
+
+    iterateOverImages();
+  </script>
+</html>
