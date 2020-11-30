@@ -12,6 +12,7 @@
   </body>
   <script>
     function iterateOverImages() {
+      var visited = [];
       var images = [
         "https://preview.redd.it/o9ptmqw8sxk21.gif?format=mp4&s=d173a07e876b542346bfd573c76c01ffa1fcf1bd",
         "https://preview.redd.it/90ekftm1ltgy.gif?format=mp4&s=5565d22b272775d99f678b3d07cc5cc84a116eb7",
@@ -27,12 +28,25 @@
         "https://preview.redd.it/5nkq3pcyxrc21.gif?format=mp4&s=e6c60a139edc15367b393ccae0daf3b2c3d9626b",
         "https://v.redd.it/xkzr7al49g851/DASH_720",
         "https://preview.redd.it/810g0l3sgis01.gif?format=mp4&s=46ab251c582b5dac6442e94879885d595af6aa5d",
+        "https://preview.redd.it/yl9yi4ovwyx31.gif?format=mp4&s=82f77b425c5cfb2c2d8b4bc14eda838d095685e1",
+        "https://preview.redd.it/y8djj6h6l8041.gif?format=mp4&s=a0987057545299180bf7a9d29364ce510c508ee3",
+        "https://v.redd.it/2rhsehtjdck51/DASH_720.mp4",
+        "https://preview.redd.it/8g1as7avjme51.gif?width=700&format=mp4&s=7e1eb222fbd4e7000adb249ccdfb77b5b0c93e17",
+        "https://preview.redd.it/7i5ux92hkug21.gif?width=841&format=mp4&s=c582b58451787e5d7e2663f0e6440520fad207a7",
+        "https://preview.redd.it/rjnvh0uzq3w41.gif?format=mp4&s=b5c25f1e51ac3ec0fe6564c27c79dc408dc782f3",
+        "https://preview.redd.it/nxd1tuuqra251.gif?format=mp4&s=8c73d1a4f5caa4416dc5228b36dececed14f267f",
+        "https://preview.redd.it/pba3mb0rtpw41.gif?format=mp4&s=ebfade2d9183d771d1bc6b9a046feeee41272c89",
+        "https://preview.redd.it/zusrb3sxsz211.gif?format=mp4&s=86ee88e5bef70a0fccd4906d8572d21b432488a2",
+        // "",
+        // "",
       ];
       // var time = 10 * 60 * 1000;
 
-      var time = 500;
+      var time = 5000;
       setInterval(function () {
-        var curImage = images[Math.floor(Math.random() * images.length)];
+        var newImageKey = Math.floor(Math.random() * images.length);
+        visited.push(newImageKey);
+        var curImage = images[newImageKey];
         console.log(curImage);
         document.getElementById("image").src = curImage;
       }, time);
